@@ -12,6 +12,8 @@ The main modules:
 * Rename
 * SASS
 * Uglify
+* Autoprefixer
+* Imagemin
 * Watch
 
 Usage

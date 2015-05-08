@@ -12,6 +12,7 @@ var gulp = require( 'gulp' ),
   notify = require( 'gulp-notify' ),
   include = require( 'gulp-include' ),
   sass = require( 'gulp-sass' );
+  imagemin = require('gulp-imagemin');
  
  
 // Default error handler
@@ -59,6 +60,14 @@ gulp.task('sass', function() {
     .pipe(notify({ message: 'sass task complete' }))
     .pipe( livereload() );
 });
+
+// Optimize Images
+gulp.task('images', function() {
+  return gulp.src('./images/**/*')
+    .pipe(imagemin({ progressive: true, svgoPlugins: [{removeViewBox: false}]}))
+    .pipe(gulp.dest('./images'))
+    .pipe(notify({ message: 'Images task complete' }));
+});
  
  
 // Start the livereload server and watch files for change
@@ -69,6 +78,8 @@ gulp.task( 'watch', function() {
   gulp.watch( [ './js/**/*.js', '!./js/dist/*.js' ], [ 'scripts' ] )
  
   gulp.watch( './sass/**/*.scss', ['sass'] );
+
+  gulp.watch('./images/**/*', ['images']);
  
   gulp.watch( './**/*.php' ).on( 'change', function( file ) {
     // reload browser whenever any PHP file changes
