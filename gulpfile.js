@@ -1,6 +1,7 @@
 // Load all the modules from package.json
 var gulp = require( 'gulp' ),
   plumber = require( 'gulp-plumber' ),
+  autoprefixer = require('gulp-autoprefixer'),
   watch = require( 'gulp-watch' ),
   livereload = require( 'gulp-livereload' ),
   minifycss = require( 'gulp-minify-css' ),
@@ -43,6 +44,7 @@ gulp.task( 'scripts', ['jshint'], function() {
     .pipe( uglify() )
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( gulp.dest( './js/dist' ) )
+    .pipe(notify({ message: 'scripts task complete' }))
     .pipe( livereload() );
 } );
  
@@ -52,12 +54,9 @@ gulp.task('sass', function() {
   return gulp.src('./sass/style.scss')
     .pipe( plumber( { errorHandler: onError } ) )
     .pipe( sass() )
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe( gulp.dest( '.' ) )
-    // Normal done, time to do minified (style.min.css)
-    // remove the following 3 lines if you don't want it
-    .pipe( minifycss() )
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( gulp.dest( '.' ) )
+    .pipe(notify({ message: 'sass task complete' }))
     .pipe( livereload() );
 });
  
