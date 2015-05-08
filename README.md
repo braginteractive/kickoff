@@ -1,7 +1,7 @@
 Kickoff
 ===
 
-Kickoff is a fork of Automattic's [_s](https://github.com/Automattic/_s) WordPress starter theme based off _s that includes Gulp. 
+Kickoff is a fork of Automattic's [_s](https://github.com/Automattic/_s) WordPress starter theme that includes Gulp. 
 
 # Pre-Installation
 
