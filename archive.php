@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Poor
+ * @package Kickoff
  */
 
 get_header(); ?>

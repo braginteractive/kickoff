@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Poor
+ * @package Kickoff
  */
 ?>
 
@@ -15,13 +15,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'poor' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kickoff' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'poor' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( esc_html__( 'Edit', 'kickoff' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Poor
+ * @package Kickoff
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php poor_posted_on(); ?>
+			<?php kickoff_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -24,6 +24,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php poor_entry_footer(); ?>
+		<?php kickoff_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

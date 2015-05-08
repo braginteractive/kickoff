@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Poor
+ * @package Kickoff
  */
 ?>
 
@@ -12,9 +12,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'poor' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'poor' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kickoff' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kickoff' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'poor' ), 'poor', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kickoff' ), 'kickoff', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

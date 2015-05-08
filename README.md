@@ -1,7 +1,7 @@
-Poor
+Kickoff
 ===
 
-Poor is a WordPress starter theme based off _s that includes Gulp. 
+Kickoff is a WordPress starter theme based off _s that includes Gulp. 
 
 The main modules:
 * JSHint
